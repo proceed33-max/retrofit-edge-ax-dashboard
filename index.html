@@ -1130,6 +1130,399 @@
       font-size:13px;
       line-height:1.55;
     }
+    .scenario-lens{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-bottom:18px;
+    }
+    .scenario-panel{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px;
+      overflow:hidden;
+    }
+    .scenario-panel h3{
+      margin:0;
+      font-size:20px;
+      color:var(--ink);
+    }
+    .scenario-steps{
+      display:grid;
+      grid-template-columns:repeat(5,minmax(0,1fr));
+      gap:10px;
+      margin:16px 0 18px;
+    }
+    .step-box{
+      min-height:82px;
+      padding:12px 10px;
+      border-radius:14px;
+      border:1px solid #D7E1EC;
+      background:#F8FBFD;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:5px;
+    }
+    .step-box strong{
+      color:var(--blue);
+      font-size:13px;
+    }
+    .step-box span{
+      color:#4A5A70;
+      font-size:12px;
+      line-height:1.35;
+      font-weight:750;
+    }
+    .workstation{
+      display:grid;
+      grid-template-columns:.92fr 1.08fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .terminal{
+      border-radius:24px;
+      padding:16px;
+      background:#0B223A;
+      color:#fff;
+      min-height:330px;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);
+    }
+    .terminal-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding-bottom:12px;
+      border-bottom:1px solid rgba(255,255,255,.15);
+      font-size:13px;
+    }
+    .terminal-top b{
+      font-size:15px;
+    }
+    .terminal-status{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      color:#A8E6DB;
+      font-weight:850;
+    }
+    .terminal-alert{
+      margin:14px 0;
+      border-radius:16px;
+      padding:14px;
+      background:#FF6B35;
+      color:#fff;
+      font-weight:900;
+      line-height:1.35;
+    }
+    .terminal-list{
+      display:grid;
+      gap:9px;
+    }
+    .terminal-item{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:14px;
+      background:rgba(255,255,255,.08);
+      color:#EAF3FA;
+      font-size:12px;
+      font-weight:800;
+    }
+    .terminal-actions{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px;
+      margin-top:14px;
+    }
+    .terminal-actions span{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:42px;
+      border-radius:13px;
+      background:#15A4CB;
+      color:#fff;
+      font-size:12px;
+      font-weight:900;
+      text-align:center;
+    }
+    .terminal-actions span:last-child{
+      background:#1C7C3A;
+    }
+    .console-screen{
+      border:1px solid #D8E3EF;
+      border-radius:20px;
+      background:#F7FAFD;
+      padding:16px;
+      min-height:330px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .console-title{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      color:var(--ink);
+      font-weight:900;
+    }
+    .copilot-answer{
+      border-left:4px solid var(--teal);
+      background:#fff;
+      border-radius:14px;
+      padding:13px 14px;
+      color:#3F4E63;
+      line-height:1.55;
+      font-size:13px;
+      font-weight:750;
+    }
+    .checklist-mini{
+      display:grid;
+      gap:8px;
+    }
+    .checkline{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      padding:10px 12px;
+      border-radius:12px;
+      background:#fff;
+      border:1px solid #E2EAF2;
+      color:#46566E;
+      font-size:12px;
+      font-weight:850;
+    }
+    .manager-wall{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:10px;
+      margin:16px 0;
+    }
+    .wall-metric{
+      border-radius:15px;
+      padding:14px;
+      background:#F6FAFC;
+      border:1px solid #DDE7F0;
+    }
+    .wall-metric b{
+      display:block;
+      color:var(--blue);
+      font-size:24px;
+      line-height:1;
+      margin-bottom:7px;
+    }
+    .wall-metric span{
+      color:#526177;
+      font-size:12px;
+      font-weight:800;
+    }
+    .camera-panel{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .camera-view{
+      border-radius:18px;
+      background:
+        linear-gradient(135deg,rgba(15,40,64,.92),rgba(10,102,135,.86)),
+        repeating-linear-gradient(45deg,rgba(255,255,255,.08) 0 8px,transparent 8px 16px);
+      color:#fff;
+      min-height:220px;
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .camera-view b{
+      font-size:18px;
+    }
+    .ai-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .ai-tags span{
+      padding:7px 9px;
+      border-radius:999px;
+      background:rgba(255,255,255,.16);
+      font-size:11px;
+      font-weight:900;
+    }
+    .event-detail{
+      display:grid;
+      gap:10px;
+    }
+    .detail-row{
+      padding:11px 12px;
+      border-radius:13px;
+      background:#F8FBFD;
+      border:1px solid #E0E9F2;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      color:#415168;
+      font-size:12px;
+      font-weight:850;
+    }
+    .scenario-operation-grid,
+    .alert-check-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:18px;
+    }
+    .equipment-board{
+      display:grid;
+      gap:12px;
+    }
+    .asset-row{
+      display:grid;
+      grid-template-columns:120px 1fr 90px;
+      gap:12px;
+      align-items:center;
+      padding:13px 14px;
+      border-radius:14px;
+      background:#F7FAFD;
+      border:1px solid #DFE8F1;
+    }
+    .asset-row b{
+      color:var(--ink);
+      font-size:13px;
+    }
+    .risk-bar{
+      height:10px;
+      border-radius:999px;
+      background:#E6EEF6;
+      overflow:hidden;
+    }
+    .risk-bar i{
+      display:block;
+      height:100%;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--teal),#F3B23A,#EF4E4E);
+    }
+    .copilot-shell{
+      border-radius:20px;
+      background:#101F33;
+      color:#EAF4FC;
+      padding:16px;
+      display:grid;
+      gap:12px;
+    }
+    .copilot-query{
+      padding:12px 14px;
+      border-radius:14px;
+      background:rgba(255,255,255,.09);
+      border:1px solid rgba(255,255,255,.1);
+      line-height:1.5;
+      font-size:13px;
+      font-weight:750;
+    }
+    .copilot-query.answer{
+      background:#F7FBFC;
+      color:#334357;
+      border-color:#DCE8F1;
+    }
+    .alert-stack{
+      display:grid;
+      gap:10px;
+      margin-top:14px;
+    }
+    .alert-tile{
+      display:grid;
+      grid-template-columns:112px 1fr 86px;
+      gap:12px;
+      align-items:center;
+      border:1px solid #E1EAF2;
+      border-left:6px solid var(--orange);
+      border-radius:16px;
+      padding:12px 14px;
+      background:#fff;
+    }
+    .alert-tile.critical{
+      border-left-color:var(--red);
+      background:#FFF8F8;
+    }
+    .alert-tile.done{
+      border-left-color:var(--green);
+      background:#F7FFF9;
+    }
+    .alert-tile b{
+      color:var(--ink);
+      font-size:13px;
+    }
+    .alert-tile span{
+      color:#516176;
+      font-size:12px;
+      font-weight:800;
+      line-height:1.45;
+    }
+    .alert-tile em{
+      font-style:normal;
+      text-align:right;
+      color:#2B3A4F;
+      font-size:12px;
+      font-weight:900;
+    }
+    .completion-summary{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:10px;
+      margin-top:14px;
+    }
+    .complete-box{
+      padding:13px;
+      border-radius:14px;
+      background:#F6FAFC;
+      border:1px solid #DDE7F0;
+      min-height:86px;
+    }
+    .complete-box b{
+      display:block;
+      color:var(--green);
+      font-size:20px;
+      margin-bottom:6px;
+    }
+    .complete-box span{
+      color:#506075;
+      font-size:12px;
+      font-weight:800;
+      line-height:1.45;
+    }
+    @media (max-width:1200px){
+      .scenario-lens,
+      .workstation,
+      .camera-panel,
+      .scenario-operation-grid,
+      .alert-check-grid{
+        grid-template-columns:1fr;
+      }
+      .scenario-steps,
+      .manager-wall,
+      .completion-summary{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+    @media (max-width:720px){
+      .scenario-steps,
+      .manager-wall,
+      .asset-row,
+      .alert-tile,
+      .completion-summary{
+        grid-template-columns:1fr;
+      }
+      .alert-tile em{
+        text-align:left;
+      }
+    }
+
     @media (max-width:1200px){
       .definition-hero,.sfr-grid,.flow-boxes,.customer-grid,.scenario,.roadmap,.rollout-hero,.rollout-summary,.ops-timeline,.ops-grid,.pm-decision{grid-template-columns:1fr;}
     }
@@ -1153,6 +1546,7 @@
       <button class="nav-btn" data-target="equipment">🦾 설비 모니터링</button>
       <button class="nav-btn" data-target="quality">📷 품질 검사</button>
       <button class="nav-btn" data-target="safety">🛡️ 안전 모니터링</button>
+      <button class="nav-btn" data-target="scenario">운영 시나리오</button>
       <button class="nav-btn" data-target="copilot">🤖 AI 코파일럿</button>
       <button class="nav-btn" data-target="strategy">📌 5W1H / AS-IS TO-BE</button>
       <button class="nav-btn" data-target="definition">📘 핵심 기능 정의서</button>
@@ -1550,6 +1944,199 @@
           </div>
         </div>
       </section>
+
+
+      <!-- Scenario -->
+      <section id="scenario" class="section">
+        <div class="section-head">
+          <h2>현장 작업자·관리자 운영 시나리오</h2>
+          <p>작업 시작부터 이상감지, AI 대응 가이드, 관리자 판단, 점검 완료 기록까지 한 화면 흐름으로 정리했습니다.</p>
+        </div>
+
+        <div class="scenario-lens">
+          <article class="scenario-panel">
+            <div class="card-head">
+              <h3>현장 작업자 화면 흐름</h3>
+              <span class="badge">작업자 단말 · 웨어러블</span>
+            </div>
+            <div class="scenario-steps">
+              <div class="step-box"><strong>01 로그인</strong><span>작업자 단말 또는 웨어러블로 작업 시작</span></div>
+              <div class="step-box"><strong>02 데이터 수집</strong><span>CCTV·IoT 센서가 위치, PPE, 설비 상태 수집</span></div>
+              <div class="step-box"><strong>03 위험 감지</strong><span>Vision AI가 위험구역 접근·끼임 위험 분석</span></div>
+              <div class="step-box"><strong>04 대응 가이드</strong><span>AI 코파일럿이 장애 이력과 조치 절차 제시</span></div>
+              <div class="step-box"><strong>05 점검 등록</strong><span>체크리스트 기반 조치 결과 시스템 기록</span></div>
+            </div>
+
+            <div class="workstation">
+              <div class="terminal">
+                <div class="terminal-top">
+                  <b>작업자 단말</b>
+                  <span class="terminal-status">LIVE · 라인 A-03</span>
+                </div>
+                <div class="terminal-alert">
+                  즉시 경고: 위험구역 접근 및 설비 #M-07 진동 상승 감지
+                </div>
+                <div class="terminal-list">
+                  <div class="terminal-item"><span>PPE 판별</span><b>안전모 확인 필요</b></div>
+                  <div class="terminal-item"><span>위치 정보</span><b>위험 반경 1.2m</b></div>
+                  <div class="terminal-item"><span>설비 상태</span><b>진동 82% · 온도 71℃</b></div>
+                  <div class="terminal-item"><span>현장 알림</span><b>경광등·단말 동시 송출</b></div>
+                </div>
+                <div class="terminal-actions">
+                  <span>AI 대응 가이드</span>
+                  <span>점검 완료 등록</span>
+                </div>
+              </div>
+
+              <div class="console-screen">
+                <div class="console-title">
+                  <span>AI 코파일럿 조치 가이드</span>
+                  <span class="state warning">주의</span>
+                </div>
+                <div class="copilot-answer">
+                  최근 30일간 동일 설비에서 진동 상승 이벤트가 4회 발생했습니다. 작업자는 설비 전면 접근을 중지하고, 안전거리 확보 후 베어링 온도와 체결부 상태를 우선 점검합니다.
+                </div>
+                <div class="checklist-mini">
+                  <div class="checkline"><span>작업자 안전거리 확보</span><b>대기</b></div>
+                  <div class="checkline"><span>PPE 재확인 및 사진 기록</span><b>대기</b></div>
+                  <div class="checkline"><span>설비 진동·온도 재측정</span><b>대기</b></div>
+                  <div class="checkline"><span>정비 필요 시 관리자 승인 요청</span><b>대기</b></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="scenario-panel">
+            <div class="card-head">
+              <h3>관리자 통합 관제 화면</h3>
+              <span class="badge">설비 · 안전 · 품질 통합</span>
+            </div>
+            <div class="manager-wall">
+              <div class="wall-metric"><b>3건</b><span>고위험 설비 이벤트</span></div>
+              <div class="wall-metric"><b>5건</b><span>작업자 안전 이벤트</span></div>
+              <div class="wall-metric"><b>12건</b><span>품질 이상 후보</span></div>
+            </div>
+            <div class="camera-panel">
+              <div class="camera-view">
+                <div>
+                  <b>CCTV A-03 · Vision AI 분석</b>
+                  <p style="margin:8px 0 0;color:rgba(255,255,255,.82);font-size:13px;font-weight:750;line-height:1.5;">작업자 접근, PPE 착용, 설비 가동 상태를 동일 이벤트 타임라인으로 조회합니다.</p>
+                </div>
+                <div class="ai-tags">
+                  <span>PPE 신뢰도 91%</span>
+                  <span>위험구역 접근</span>
+                  <span>진동 임계치 초과</span>
+                  <span>품질검사 연계</span>
+                </div>
+              </div>
+              <div class="event-detail">
+                <div class="detail-row"><span>위험 등급</span><b>High</b></div>
+                <div class="detail-row"><span>권장 조치</span><b>현장 출동 요청</b></div>
+                <div class="detail-row"><span>설비 제어</span><b>부분 정지 검토</b></div>
+                <div class="detail-row"><span>조치 SLA</span><b>15분 이내</b></div>
+                <div class="detail-row"><span>기록 상태</span><b>이벤트 자동 생성</b></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="scenario-operation-grid">
+          <article class="scenario-panel">
+            <div class="card-head">
+              <h3>설비 모니터링 대시보드</h3>
+              <span class="badge">예지정비 · 우선순위</span>
+            </div>
+            <div class="equipment-board">
+              <div class="asset-row">
+                <b>M-07 프레스</b>
+                <div class="risk-bar"><i style="width:82%"></i></div>
+                <span class="state critical">위험</span>
+              </div>
+              <div class="asset-row">
+                <b>C-12 컨베이어</b>
+                <div class="risk-bar"><i style="width:64%"></i></div>
+                <span class="state warning">주의</span>
+              </div>
+              <div class="asset-row">
+                <b>V-04 비전검사</b>
+                <div class="risk-bar"><i style="width:46%"></i></div>
+                <span class="state normal">정상</span>
+              </div>
+            </div>
+            <div class="note-strip">
+              관리자 판단 기준: 설비 위험등급, 이상 징후 빈도, 최근 정비 이력, 생산 영향도를 함께 반영해 정비 우선순위를 추천합니다.
+            </div>
+          </article>
+
+          <article class="scenario-panel">
+            <div class="card-head">
+              <h3>AI 코파일럿 질의 화면</h3>
+              <span class="badge">원인 요약 · 조치 추천</span>
+            </div>
+            <div class="copilot-shell">
+              <div class="copilot-query">관리자: A-03 라인의 위험등급이 왜 High로 올라갔나요?</div>
+              <div class="copilot-query answer">
+                A-03 라인은 최근 10분 동안 진동값이 기준 대비 38% 상승했고, 작업자 위험구역 접근 이벤트가 동시에 발생했습니다. 동일 설비의 최근 정비 이력상 베어링 교체 후 90일이 경과해 현장 점검 우선순위를 높게 판단했습니다.
+              </div>
+              <div class="copilot-query">관리자: 지금 필요한 조치는 무엇인가요?</div>
+              <div class="copilot-query answer">
+                1차 조치는 현장 작업자 접근 제한, PPE 재확인, 진동·온도 재측정입니다. 수치가 유지되면 설비 부분 정지 후 정비 오더를 생성하는 것이 적절합니다.
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="alert-check-grid">
+          <article class="scenario-panel">
+            <div class="card-head">
+              <h3>이상감지 알림 화면</h3>
+              <span class="badge">실시간 이벤트</span>
+            </div>
+            <div class="alert-stack">
+              <div class="alert-tile critical">
+                <b>끼임 위험</b>
+                <span>작업자 손 위치가 가동부 위험영역에 2.1초 이상 진입</span>
+                <em>즉시 대응</em>
+              </div>
+              <div class="alert-tile">
+                <b>PPE 미착용</b>
+                <span>라인 B-02 작업자의 안전모 착용 신뢰도 62%</span>
+                <em>재확인</em>
+              </div>
+              <div class="alert-tile">
+                <b>품질 이상</b>
+                <span>비전검사 공정에서 표면 스크래치 후보 7건 감지</span>
+                <em>검토</em>
+              </div>
+            </div>
+          </article>
+
+          <article class="scenario-panel">
+            <div class="card-head">
+              <h3>점검완료 및 조치결과 알림</h3>
+              <span class="badge">이력 저장 · 승인</span>
+            </div>
+            <div class="alert-stack">
+              <div class="alert-tile done">
+                <b>점검 완료</b>
+                <span>M-07 프레스 진동 재측정 및 보호커버 체결 상태 확인 완료</span>
+                <em>기록 저장</em>
+              </div>
+              <div class="alert-tile done">
+                <b>조치 승인</b>
+                <span>관리자 승인 후 정비 오더 WO-0624-017 자동 생성</span>
+                <em>완료</em>
+              </div>
+            </div>
+            <div class="completion-summary">
+              <div class="complete-box"><b>86%</b><span>금일 점검 체크리스트 완료율</span></div>
+              <div class="complete-box"><b>12분</b><span>위험 이벤트 평균 대응 시간</span></div>
+              <div class="complete-box"><b>100%</b><span>조치 이력 자동 저장률</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
 
       <!-- Strategy -->
       <section id="strategy" class="section">
@@ -2103,6 +2690,7 @@
       quality: "비전 AI 기반 품질검사",
       safety: "작업자 안전 모니터링",
       copilot: "생성형 AI 운영 코파일럿",
+      scenario: "현장 작업자·관리자 운영 시나리오",
       strategy: "5W1H 문제정의 / AS-IS TO-BE",
       definition: "핵심 기능 정의서",
       rollout: "테스트·오픈·안정화 관리"
