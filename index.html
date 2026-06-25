@@ -1699,6 +1699,431 @@
       line-height:1.55;
     }
 
+
+    .control-dashboard{
+      display:grid;
+      grid-template-columns:270px minmax(0,1fr) 300px;
+      gap:16px;
+      align-items:start;
+    }
+    .dash-panel{
+      background:#fff;
+      border:1px solid #DDE8F2;
+      border-radius:18px;
+      box-shadow:0 12px 30px rgba(7,59,128,.06);
+      padding:16px;
+      overflow:hidden;
+    }
+    .dash-panel.dark{
+      background:#071F36;
+      color:#fff;
+      border-color:#102F4F;
+    }
+    .dash-panel h3{
+      margin:0;
+      color:#071F42;
+      font-size:17px;
+      line-height:1.25;
+    }
+    .dash-panel.dark h3{
+      color:#fff;
+    }
+    .dash-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:14px;
+    }
+    .dash-mini{
+      color:#6A7B91;
+      font-size:11px;
+      font-weight:900;
+    }
+    .dark .dash-mini{
+      color:#A9C5DE;
+    }
+    .site-summary{
+      display:grid;
+      gap:12px;
+    }
+    .summary-tile{
+      border-radius:16px;
+      padding:14px;
+      background:#F7FAFD;
+      border:1px solid #DFE8F1;
+    }
+    .summary-tile b{
+      display:block;
+      color:#073B80;
+      font-size:28px;
+      line-height:1;
+      margin-bottom:7px;
+    }
+    .summary-tile span{
+      color:#526177;
+      font-size:12px;
+      font-weight:850;
+      line-height:1.45;
+    }
+    .risk-gauge{
+      height:138px;
+      border-radius:20px;
+      background:
+        conic-gradient(from 220deg,#19A974 0 36%,#F4B542 36% 68%,#EF4E4E 68% 100%);
+      position:relative;
+      margin:8px 0 14px;
+    }
+    .risk-gauge:after{
+      content:"";
+      position:absolute;
+      inset:28px;
+      border-radius:18px;
+      background:#fff;
+    }
+    .risk-score{
+      position:absolute;
+      inset:0;
+      z-index:1;
+      display:grid;
+      place-items:center;
+      color:#073B80;
+      font-weight:950;
+      font-size:31px;
+    }
+    .weather-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px;
+    }
+    .weather-grid div{
+      padding:10px;
+      border-radius:12px;
+      background:#F7FAFD;
+      border:1px solid #E2EAF2;
+    }
+    .weather-grid b{
+      display:block;
+      color:#071F42;
+      font-size:15px;
+      margin-bottom:3px;
+    }
+    .weather-grid span{
+      color:#526177;
+      font-size:11px;
+      font-weight:800;
+    }
+    .manager-top-strip{
+      display:grid;
+      grid-template-columns:1.35fr .65fr;
+      gap:14px;
+      margin-bottom:14px;
+    }
+    .dark-kpis{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:10px;
+    }
+    .dark-kpi{
+      padding:13px;
+      border-radius:14px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      min-height:78px;
+      word-break:keep-all;
+    }
+    .dark-kpi b{
+      display:block;
+      font-size:24px;
+      color:#fff;
+      margin-bottom:6px;
+    }
+    .dark-kpi span{
+      color:#BBD4EA;
+      font-size:12px;
+      line-height:1.45;
+      font-weight:800;
+    }
+    .sensor-trend{
+      height:178px;
+      border-radius:16px;
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02)),
+        repeating-linear-gradient(0deg,rgba(255,255,255,.08) 0 1px,transparent 1px 34px);
+      position:relative;
+      overflow:hidden;
+      margin-top:12px;
+    }
+    .trend-line{
+      position:absolute;
+      left:22px;
+      right:22px;
+      top:44px;
+      height:96px;
+      border-bottom:3px solid #F4B542;
+      transform:skewY(-9deg);
+      transform-origin:left center;
+    }
+    .trend-line:before,
+    .trend-line:after{
+      content:"";
+      position:absolute;
+      width:9px;height:9px;
+      border-radius:50%;
+      background:#F4B542;
+      box-shadow:130px -23px 0 #F4B542,260px -41px 0 #F4B542,390px -62px 0 #F4B542;
+      left:4px;bottom:-6px;
+    }
+    .trend-labels{
+      position:absolute;
+      left:18px;right:18px;bottom:12px;
+      display:flex;
+      justify-content:space-between;
+      color:#A9C5DE;
+      font-size:11px;
+      font-weight:900;
+    }
+    .line-status-toolbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .filter-pills{
+      display:flex;
+      gap:7px;
+      flex-wrap:wrap;
+    }
+    .filter-pills span{
+      padding:7px 10px;
+      border-radius:999px;
+      background:#EEF4FA;
+      color:#24445F;
+      font-size:11px;
+      font-weight:950;
+    }
+    .filter-pills span.active{
+      background:#073B80;
+      color:#fff;
+    }
+    .line-grid-20{
+      display:grid;
+      grid-template-columns:repeat(5,minmax(0,1fr));
+      gap:9px;
+    }
+    .line-cell{
+      min-height:74px;
+      border-radius:14px;
+      padding:10px;
+      border:1px solid #DDE8F2;
+      background:#F7FBFC;
+      position:relative;
+      cursor:pointer;
+    }
+    .line-cell b{
+      display:block;
+      color:#071F42;
+      font-size:12px;
+      margin-bottom:6px;
+    }
+    .line-cell span{
+      display:inline-flex;
+      padding:4px 7px;
+      border-radius:999px;
+      font-size:10px;
+      font-weight:950;
+      color:#fff;
+      background:#19A974;
+    }
+    .line-cell small{
+      display:block;
+      margin-top:6px;
+      color:#526177;
+      font-size:10px;
+      line-height:1.3;
+      font-weight:800;
+    }
+    .line-cell.warn{
+      background:#FFF9E8;
+      border-color:#F2D284;
+    }
+    .line-cell.warn span{
+      background:#F4B542;
+      color:#402D00;
+    }
+    .line-cell.danger{
+      background:#FFF4F4;
+      border-color:#F4B2B2;
+    }
+    .line-cell.danger span{
+      background:#EF4E4E;
+    }
+    .line-cell.selected{
+      box-shadow:0 0 0 3px rgba(12,146,161,.18);
+      border-color:#0C92A1;
+    }
+    .detail-dashboard{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:14px;
+    }
+    .vision-view{
+      min-height:282px;
+      border-radius:18px;
+      padding:18px;
+      color:#fff;
+      background:
+        linear-gradient(135deg,rgba(9,31,54,.94),rgba(9,91,112,.86)),
+        radial-gradient(circle at 70% 40%,rgba(27,199,185,.42),transparent 26%),
+        repeating-linear-gradient(45deg,rgba(255,255,255,.08) 0 8px,transparent 8px 16px);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .vision-view b{
+      font-size:18px;
+    }
+    .vision-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:7px;
+    }
+    .vision-tags span{
+      padding:7px 9px;
+      border-radius:999px;
+      background:rgba(255,255,255,.16);
+      font-size:11px;
+      font-weight:900;
+    }
+    .sensor-stack{
+      display:grid;
+      gap:10px;
+    }
+    .sensor-row{
+      display:grid;
+      grid-template-columns:70px 1fr 58px;
+      gap:10px;
+      align-items:center;
+      border-radius:13px;
+      border:1px solid #E2EAF2;
+      background:#F8FBFD;
+      padding:11px 12px;
+    }
+    .sensor-row b{
+      color:#071F42;
+      font-size:12px;
+    }
+    .sensor-bar{
+      height:9px;
+      border-radius:999px;
+      background:#E4EDF5;
+      overflow:hidden;
+    }
+    .sensor-bar i{
+      display:block;
+      height:100%;
+      border-radius:999px;
+      background:linear-gradient(90deg,#19A974,#F4B542,#EF4E4E);
+    }
+    .sensor-row span{
+      text-align:right;
+      color:#243A52;
+      font-size:12px;
+      font-weight:950;
+    }
+    .response-panel{
+      display:grid;
+      gap:12px;
+    }
+    .meeting-box{
+      border:1px solid #DDE8F2;
+      border-radius:16px;
+      padding:13px;
+      background:#F7FAFD;
+    }
+    .meeting-box b{
+      display:block;
+      color:#071F42;
+      margin-bottom:6px;
+    }
+    .meeting-box span{
+      color:#526177;
+      font-size:12px;
+      line-height:1.45;
+      font-weight:800;
+    }
+    .response-button{
+      border:0;
+      border-radius:16px;
+      min-height:50px;
+      background:#0BA95B;
+      color:#fff;
+      font-size:14px;
+      font-weight:950;
+      cursor:pointer;
+      box-shadow:0 12px 24px rgba(11,169,91,.18);
+    }
+    .response-button.stop{
+      background:#073B80;
+      box-shadow:0 12px 24px rgba(7,59,128,.18);
+    }
+    .event-feed{
+      display:grid;
+      gap:9px;
+    }
+    .feed-item{
+      border-radius:14px;
+      padding:11px 12px;
+      background:#F7FAFD;
+      border:1px solid #E1EAF2;
+    }
+    .feed-item b{
+      display:block;
+      color:#071F42;
+      font-size:12px;
+      margin-bottom:5px;
+    }
+    .feed-item span{
+      display:block;
+      color:#526177;
+      font-size:11px;
+      line-height:1.4;
+      font-weight:800;
+    }
+    .feed-item.ok{
+      border-left:5px solid #19A974;
+    }
+    .feed-item.warn{
+      border-left:5px solid #F4B542;
+    }
+    .feed-item.danger{
+      border-left:5px solid #EF4E4E;
+    }
+    @media (max-width:1320px){
+      .control-dashboard{
+        grid-template-columns:1fr;
+      }
+      .manager-top-strip,
+      .detail-dashboard{
+        grid-template-columns:1fr;
+      }
+    }
+    @media (max-width:880px){
+      .dark-kpis,
+      .line-grid-20{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+    }
+    @media (max-width:560px){
+      .dark-kpis,
+      .line-grid-20,
+      .weather-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
     .role-entry-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -2662,56 +3087,130 @@
       <section id="manager" class="section">
         <div class="mode-intro-clean">
           <div>
-            <span class="mode-eyebrow">Control Room</span>
-            <h2>관리자 모드</h2>
-            <p>관리자 화면은 전체 현황과 판단 근거가 먼저입니다. 설비·안전·품질 이벤트를 연결해 위험등급과 조치 우선순위를 보여줍니다.</p>
+            <span class="mode-eyebrow">Control Dashboard</span>
+            <h2>스마트 제조 운영·안전 관제 대시보드</h2>
+            <p>20개 생산라인/설비 상태를 한 화면에서 보고, 특정 설비 선택 시 센서 추이와 CCTV/Vision AI 화면, 긴급 대응 조치를 함께 확인합니다.</p>
           </div>
           <button class="mode-return" data-jump-target="roleSelect">역할 선택으로</button>
         </div>
 
-        <div class="manager-command">
-          <div class="command-tile"><b>3건</b><span>고위험 설비 이벤트</span></div>
-          <div class="command-tile"><b>5건</b><span>작업자 안전 이벤트</span></div>
-          <div class="command-tile"><b>12건</b><span>품질 이상 후보</span></div>
-          <div class="command-tile"><b>12분</b><span>평균 대응 시간</span></div>
-        </div>
-
-        <div class="manager-main-grid">
-          <article class="focus-panel">
-            <h3>통합 이벤트 관제</h3>
-            <div class="event-map">
-              <div class="event-visual">
-                <div>
-                  <b>CCTV A-03 · Vision AI 분석</b>
-                  <p style="margin:10px 0 0;color:rgba(255,255,255,.84);font-size:13px;line-height:1.55;font-weight:750;">작업자 접근, PPE 착용, 설비 가동 상태를 동일 이벤트 타임라인으로 조회합니다.</p>
-                </div>
-                <div>
-                  <span>PPE 62%</span><span>끼임 위험</span><span>진동 초과</span>
-                </div>
-              </div>
-              <div class="decision-list">
-                <div><b>위험 등급</b><span>High, 현장 출동 및 부분 정지 검토</span></div>
-                <div><b>근거 데이터</b><span>CCTV 이벤트, 진동 82%, 최근 정비 이력 90일 경과</span></div>
-                <div><b>권장 조치</b><span>작업자 이탈 확인 후 정비 오더 생성</span></div>
-                <div><b>기록 상태</b><span>이벤트와 점검 결과 자동 이력화</span></div>
-              </div>
+        <div class="control-dashboard">
+          <aside class="dash-panel">
+            <div class="dash-head">
+              <h3>현장 위험 요약</h3>
+              <span class="dash-mini">20개 지점</span>
             </div>
-          </article>
+            <div class="site-summary">
+              <div class="summary-tile"><b>13</b><span>정상 설비 / 정상 생산라인</span></div>
+              <div class="summary-tile"><b>5</b><span>주의 설비 / 임계치 80% 이상</span></div>
+              <div class="summary-tile"><b>2</b><span>위험 설비 / 즉시 대응 대상</span></div>
+            </div>
+            <div class="risk-gauge"><div class="risk-score">28.9</div></div>
+            <div class="dash-mini">위험도 점수는 설비 센서, 안전 이벤트, 품질 이상 후보를 함께 반영합니다.</div>
+          </aside>
 
-          <div class="clean-card-stack">
-            <article class="clean-card">
-              <h3>관리자 판단 버튼</h3>
-              <div class="check-road">
-                <div><span>현장 출동 요청</span><b>권장</b></div>
-                <div><span>설비 부분 정지</span><b>검토</b></div>
-                <div><span>정비 오더 생성</span><b>대기</b></div>
+          <div>
+            <div class="manager-top-strip">
+              <section class="dash-panel dark">
+                <div class="dash-head">
+                  <h3>선택 설비: M-07 프레스 라인</h3>
+                  <span class="dash-mini">업데이트 12:04:31</span>
+                </div>
+                <div class="dark-kpis">
+                  <div class="dark-kpi"><b>82%</b><span>진동 위험도</span></div>
+                  <div class="dark-kpi"><b>71℃</b><span>모터 온도</span></div>
+                  <div class="dark-kpi"><b>High</b><span>AI 위험등급</span></div>
+                  <div class="dark-kpi"><b>15분</b><span>대응 SLA</span></div>
+                </div>
+                <div class="sensor-trend">
+                  <div class="trend-line"></div>
+                  <div class="trend-labels"><span>09:00</span><span>10:00</span><span>11:00</span><span>12:00</span></div>
+                </div>
+              </section>
+
+              <section class="dash-panel">
+                <div class="dash-head">
+                  <h3>환경</h3>
+                  <span class="dash-mini">외부 조건</span>
+                </div>
+                <div class="weather-grid">
+                  <div><b>15.3℃</b><span>작업장 온도</span></div>
+                  <div><b>2.6m/s</b><span>환기 풍속</span></div>
+                  <div><b>77%</b><span>습도</span></div>
+                  <div><b>정상</b><span>네트워크 상태</span></div>
+                </div>
+              </section>
+            </div>
+
+            <section class="dash-panel">
+              <div class="line-status-toolbar">
+                <div>
+                  <h3>20개 생산라인·설비 상태</h3>
+                  <span class="dash-mini">중앙 모니터링 보드</span>
+                </div>
+                <div class="filter-pills"><span class="active">전체</span><span>이상 설비만</span><span>위험</span></div>
               </div>
-            </article>
-            <article class="clean-card">
-              <h3>품질 이상 연결</h3>
-              <div class="sentence-card">같은 라인의 품질 이상 후보 7건을 함께 표시해, 설비 이상이 품질 문제로 이어지는지 관리자 화면에서 바로 확인합니다.</div>
-            </article>
+              <div class="line-grid-20">
+                <div class="line-cell"><b>L-01 포장</b><span>정상</span><small>가동률 98%</small></div>
+                <div class="line-cell warn"><b>L-02 컨베이어</b><span>주의</span><small>전류 76%</small></div>
+                <div class="line-cell"><b>L-03 검사</b><span>정상</span><small>불량 0.2%</small></div>
+                <div class="line-cell danger selected"><b>M-07 프레스</b><span>위험</span><small>진동 82%</small></div>
+                <div class="line-cell"><b>L-05 조립</b><span>정상</span><small>온도 39℃</small></div>
+                <div class="line-cell"><b>L-06 적재</b><span>정상</span><small>PPE 정상</small></div>
+                <div class="line-cell warn"><b>L-07 절단</b><span>주의</span><small>소음 79%</small></div>
+                <div class="line-cell"><b>L-08 이송</b><span>정상</span><small>동선 정상</small></div>
+                <div class="line-cell"><b>L-09 냉각</b><span>정상</span><small>냉각수 정상</small></div>
+                <div class="line-cell warn"><b>L-10 용접</b><span>주의</span><small>조도 낮음</small></div>
+                <div class="line-cell"><b>L-11 검사</b><span>정상</span><small>AI 96%</small></div>
+                <div class="line-cell"><b>L-12 세척</b><span>정상</span><small>압력 정상</small></div>
+                <div class="line-cell danger"><b>L-13 로봇암</b><span>위험</span><small>안전영역 침범</small></div>
+                <div class="line-cell"><b>L-14 계량</b><span>정상</span><small>편차 0.1%</small></div>
+                <div class="line-cell warn"><b>L-15 팔레타이징</b><span>주의</span><small>대기열 증가</small></div>
+                <div class="line-cell"><b>L-16 건조</b><span>정상</span><small>온도 정상</small></div>
+                <div class="line-cell"><b>L-17 출하</b><span>정상</span><small>지연 없음</small></div>
+                <div class="line-cell"><b>L-18 비전</b><span>정상</span><small>카메라 정상</small></div>
+                <div class="line-cell warn"><b>L-19 충전</b><span>주의</span><small>진동 68%</small></div>
+                <div class="line-cell"><b>L-20 보관</b><span>정상</span><small>환경 정상</small></div>
+              </div>
+
+              <div class="detail-dashboard">
+                <div class="vision-view">
+                  <div>
+                    <b>CCTV / Vision AI 화면</b>
+                    <p style="margin:8px 0 0;color:rgba(255,255,255,.82);font-size:13px;line-height:1.55;font-weight:750;">프레스 가동부 위험 반경에 작업자가 접근했고, 안전모 판별 신뢰도가 기준 이하로 감지되었습니다.</p>
+                  </div>
+                  <div class="vision-tags"><span>작업자 접근</span><span>PPE 62%</span><span>끼임 위험</span><span>설비 진동 초과</span></div>
+                </div>
+                <div class="sensor-stack">
+                  <div class="sensor-row"><b>진동</b><div class="sensor-bar"><i style="width:82%"></i></div><span>82%</span></div>
+                  <div class="sensor-row"><b>온도</b><div class="sensor-bar"><i style="width:71%"></i></div><span>71℃</span></div>
+                  <div class="sensor-row"><b>전류</b><div class="sensor-bar"><i style="width:64%"></i></div><span>64%</span></div>
+                  <div class="sensor-row"><b>PPE</b><div class="sensor-bar"><i style="width:62%"></i></div><span>62%</span></div>
+                  <div class="sensor-row"><b>품질</b><div class="sensor-bar"><i style="width:34%"></i></div><span>후보 7</span></div>
+                </div>
+              </div>
+            </section>
           </div>
+
+          <aside class="dash-panel response-panel">
+            <div class="dash-head">
+              <h3>안전 이벤트 대응</h3>
+              <span class="dash-mini">High</span>
+            </div>
+            <div class="meeting-box"><b>M-07 프레스 위험 이벤트</b><span>끼임 위험 반경 접근과 설비 진동 초과가 동시에 발생했습니다.</span></div>
+            <button class="response-button">긴급 대응 요청</button>
+            <button class="response-button stop">작업중지 요청</button>
+            <div class="dash-head" style="margin-top:6px;margin-bottom:0;">
+              <h3>현장점검 현황</h3>
+              <span class="dash-mini">최근 이벤트</span>
+            </div>
+            <div class="event-feed">
+              <div class="feed-item danger"><b>12:04 위험</b><span>M-07 프레스 끼임 위험 감지 / 긴급 확인 필요</span></div>
+              <div class="feed-item warn"><b>11:52 주의</b><span>L-10 용접 조도 저하 / 카메라 판별률 하락</span></div>
+              <div class="feed-item ok"><b>11:40 완료</b><span>L-03 검사라인 품질 이상 후보 재검 완료</span></div>
+              <div class="feed-item warn"><b>11:25 주의</b><span>L-15 팔레타이징 대기열 증가</span></div>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -3859,6 +4358,48 @@
 
     document.querySelectorAll('[data-jump-target]').forEach(btn=>{
       btn.addEventListener('click',()=>activateSection(btn.dataset.jumpTarget));
+    });
+
+    document.querySelectorAll('#manager .filter-pills span').forEach(pill=>{
+      pill.addEventListener('click',()=>{
+        const mode = pill.textContent.trim();
+        document.querySelectorAll('#manager .filter-pills span').forEach(p=>p.classList.remove('active'));
+        pill.classList.add('active');
+        document.querySelectorAll('#manager .line-cell').forEach(cell=>{
+          const isWarn = cell.classList.contains('warn');
+          const isDanger = cell.classList.contains('danger');
+          cell.style.display =
+            mode === '전체' ? '' :
+            mode === '위험' ? (isDanger ? '' : 'none') :
+            (isWarn || isDanger ? '' : 'none');
+        });
+      });
+    });
+
+    document.querySelectorAll('#manager .line-cell').forEach(cell=>{
+      cell.addEventListener('click',()=>{
+        document.querySelectorAll('#manager .line-cell').forEach(c=>c.classList.remove('selected'));
+        cell.classList.add('selected');
+        const name = cell.querySelector('b')?.textContent?.trim() || '선택 설비';
+        const status = cell.querySelector('span')?.textContent?.trim() || '정상';
+        const metric = cell.querySelector('small')?.textContent?.trim() || '상태 확인';
+        const selectedTitle = document.querySelector('#manager .dash-panel.dark .dash-head h3');
+        const aiGrade = document.querySelectorAll('#manager .dark-kpi b')[2];
+        const visionText = document.querySelector('#manager .vision-view p');
+        if(selectedTitle) selectedTitle.textContent = '선택 설비: ' + name;
+        if(aiGrade) aiGrade.textContent = status === '위험' ? 'High' : status === '주의' ? 'Medium' : 'Normal';
+        if(visionText) visionText.textContent = `${name}의 현재 상태는 ${status}입니다. 주요 지표는 ${metric}이며, 필요 시 CCTV/Vision AI 화면과 센서 추이를 함께 확인합니다.`;
+      });
+    });
+
+    document.querySelectorAll('#manager .response-button').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const feed = document.querySelector('#manager .event-feed');
+        const item = document.createElement('div');
+        item.className = btn.classList.contains('stop') ? 'feed-item danger' : 'feed-item warn';
+        item.innerHTML = `<b>요청 완료</b><span>${btn.textContent.trim()}이 등록되었습니다. 담당자 화면과 작업자 단말에 알림을 전송했습니다.</span>`;
+        if(feed) feed.prepend(item);
+      });
     });
 
     async function fakeChat(){
