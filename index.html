@@ -191,6 +191,574 @@
       box-shadow:0 0 0 5px rgba(32,178,107,.12);
     }
 
+
+    .app.entry-mode{
+      display:block;
+      min-height:100vh;
+      background:
+        linear-gradient(135deg,rgba(230,246,250,.92),rgba(244,248,252,.96)),
+        radial-gradient(circle at 78% 12%,rgba(22,183,198,.22),transparent 34%);
+    }
+    .app.entry-mode aside,
+    .app.entry-mode .topbar{
+      display:none;
+    }
+    .app.entry-mode main{
+      padding:0;
+      min-height:100vh;
+      overflow:auto;
+    }
+    .app.entry-mode #roleSelect.active{
+      min-height:100vh;
+      padding:0;
+    }
+    .entry-shell{
+      min-height:100vh;
+      padding:34px clamp(26px,4vw,64px);
+      display:flex;
+      flex-direction:column;
+      gap:28px;
+    }
+    .entry-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:18px;
+    }
+    .entry-brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .entry-mark{
+      width:54px;
+      height:54px;
+      display:grid;
+      place-items:center;
+      border-radius:18px;
+      background:#073B80;
+      color:#fff;
+      font-size:18px;
+      font-weight:950;
+      box-shadow:0 14px 30px rgba(7,59,128,.18);
+    }
+    .entry-brand b{
+      display:block;
+      color:#071F42;
+      font-size:19px;
+      line-height:1.1;
+    }
+    .entry-brand span{
+      display:block;
+      color:#607189;
+      margin-top:4px;
+      font-size:13px;
+      font-weight:800;
+    }
+    .entry-badge{
+      border:1px solid #C9D8E8;
+      border-radius:999px;
+      background:#fff;
+      color:#0C4B70;
+      padding:10px 14px;
+      font-size:13px;
+      font-weight:900;
+      box-shadow:0 10px 22px rgba(7,59,128,.06);
+    }
+    .entry-layout{
+      display:grid;
+      grid-template-columns:.86fr 1.14fr;
+      gap:30px;
+      align-items:center;
+      flex:1;
+    }
+    .entry-copy small,
+    .mode-eyebrow{
+      display:block;
+      color:#0C75B8;
+      font-size:13px;
+      letter-spacing:.08em;
+      font-weight:950;
+      text-transform:uppercase;
+      margin-bottom:12px;
+    }
+    .entry-copy h2{
+      margin:0;
+      color:#071F42;
+      font-size:clamp(38px,5vw,62px);
+      line-height:1.06;
+      max-width:720px;
+    }
+    .entry-copy p{
+      margin:20px 0 0;
+      color:#405169;
+      font-size:17px;
+      line-height:1.7;
+      font-weight:750;
+      max-width:620px;
+    }
+    .entry-proof{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;
+      margin-top:26px;
+      max-width:620px;
+    }
+    .entry-proof div{
+      border:1px solid #D6E2ED;
+      background:rgba(255,255,255,.72);
+      border-radius:18px;
+      padding:16px;
+    }
+    .entry-proof b{
+      display:block;
+      color:#073B80;
+      font-size:24px;
+      margin-bottom:6px;
+    }
+    .entry-proof span{
+      color:#526177;
+      font-size:12px;
+      font-weight:850;
+      line-height:1.45;
+    }
+    .role-choice-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    .role-choice-card{
+      border:1px solid #D6E2ED;
+      border-radius:28px;
+      background:#fff;
+      box-shadow:0 20px 48px rgba(7,59,128,.10);
+      padding:24px;
+      min-height:480px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      cursor:pointer;
+      text-align:left;
+      transition:.18s ease;
+      color:inherit;
+      font:inherit;
+    }
+    .role-choice-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 24px 56px rgba(7,59,128,.15);
+      border-color:#99CAD6;
+    }
+    .role-choice-card.manager:hover{
+      border-color:#7AA9E8;
+    }
+    .role-choice-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:16px;
+    }
+    .role-choice-card h3{
+      margin:0;
+      color:#071F42;
+      font-size:31px;
+      line-height:1.12;
+    }
+    .role-choice-card p{
+      margin:12px 0 0;
+      color:#516176;
+      font-size:14px;
+      line-height:1.65;
+      font-weight:750;
+    }
+    .role-code{
+      width:48px;
+      height:48px;
+      display:grid;
+      place-items:center;
+      border-radius:16px;
+      background:#EAF8FA;
+      color:#0A7B8A;
+      font-weight:950;
+      flex:none;
+    }
+    .manager .role-code{
+      background:#EDF4FF;
+      color:#073B80;
+    }
+    .choice-flow{
+      display:grid;
+      gap:10px;
+      margin:26px 0;
+    }
+    .choice-step{
+      display:grid;
+      grid-template-columns:36px 1fr;
+      gap:12px;
+      align-items:center;
+      padding:12px;
+      border-radius:16px;
+      background:#F7FAFD;
+      border:1px solid #E1EAF2;
+    }
+    .choice-step b{
+      width:36px;
+      height:36px;
+      border-radius:13px;
+      display:grid;
+      place-items:center;
+      background:#0C92A1;
+      color:#fff;
+      font-size:13px;
+    }
+    .manager .choice-step b{
+      background:#073B80;
+    }
+    .choice-step span{
+      color:#2F4058;
+      font-size:13px;
+      line-height:1.45;
+      font-weight:850;
+    }
+    .choice-cta{
+      min-height:52px;
+      border-radius:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#0C92A1,#13BBC8);
+      color:#fff;
+      font-size:15px;
+      font-weight:950;
+    }
+    .manager .choice-cta{
+      background:linear-gradient(135deg,#073B80,#061B42);
+    }
+    .entry-infographic{
+      display:grid;
+      grid-template-columns:repeat(5,minmax(0,1fr));
+      gap:10px;
+      padding:14px;
+      border-radius:24px;
+      background:rgba(255,255,255,.72);
+      border:1px solid #D7E4EF;
+    }
+    .info-node{
+      padding:14px;
+      min-height:94px;
+      border-radius:18px;
+      background:#fff;
+      border:1px solid #E3ECF4;
+    }
+    .info-node b{
+      display:block;
+      color:#073B80;
+      font-size:13px;
+      margin-bottom:7px;
+    }
+    .info-node span{
+      color:#526177;
+      font-size:12px;
+      line-height:1.45;
+      font-weight:780;
+    }
+    .mode-intro-clean{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:18px;
+      margin-bottom:20px;
+    }
+    .mode-intro-clean h2{
+      margin:0;
+      color:#071F42;
+      font-size:34px;
+      line-height:1.12;
+    }
+    .mode-intro-clean p{
+      margin:10px 0 0;
+      color:#526177;
+      font-size:15px;
+      line-height:1.65;
+      font-weight:750;
+      max-width:760px;
+    }
+    .mode-return{
+      border:0;
+      background:#EEF4FA;
+      color:#12314E;
+      border-radius:14px;
+      min-height:44px;
+      padding:0 14px;
+      font-weight:950;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .clean-process{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:12px;
+      margin-bottom:18px;
+    }
+    .clean-process div{
+      padding:15px;
+      border-radius:18px;
+      background:#fff;
+      border:1px solid #DDE8F2;
+      box-shadow:0 10px 26px rgba(7,59,128,.05);
+    }
+    .clean-process b{
+      display:block;
+      color:#0C75B8;
+      margin-bottom:7px;
+      font-size:13px;
+    }
+    .clean-process span{
+      color:#526177;
+      font-size:12px;
+      line-height:1.45;
+      font-weight:800;
+    }
+    .clean-role-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:18px;
+      align-items:start;
+    }
+    .focus-panel{
+      background:#fff;
+      border:1px solid #DDE8F2;
+      border-radius:24px;
+      box-shadow:0 14px 34px rgba(7,59,128,.08);
+      padding:20px;
+    }
+    .focus-panel.dark{
+      background:#071F36;
+      color:#fff;
+      border-color:#112E4D;
+    }
+    .focus-panel h3{
+      margin:0 0 14px;
+      color:inherit;
+      font-size:21px;
+    }
+    .alert-hero{
+      border-radius:20px;
+      padding:18px;
+      background:#FF6B35;
+      color:#fff;
+      margin-bottom:14px;
+      font-weight:950;
+      line-height:1.45;
+    }
+    .mini-status-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+    .mini-status{
+      border-radius:16px;
+      padding:13px;
+      background:rgba(255,255,255,.08);
+      min-height:86px;
+    }
+    .mini-status b{
+      display:block;
+      font-size:13px;
+      margin-bottom:7px;
+    }
+    .mini-status span{
+      color:#DCEBFA;
+      font-size:12px;
+      line-height:1.45;
+      font-weight:750;
+    }
+    .action-strip{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:14px;
+    }
+    .action-strip span{
+      min-height:48px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:#13A8C2;
+      color:#fff;
+      font-weight:950;
+      font-size:13px;
+      text-align:center;
+    }
+    .action-strip span:last-child{
+      background:#20A65B;
+    }
+    .clean-card-stack{
+      display:grid;
+      gap:14px;
+    }
+    .clean-card{
+      background:#fff;
+      border:1px solid #DDE8F2;
+      border-radius:22px;
+      padding:18px;
+      box-shadow:0 12px 28px rgba(7,59,128,.06);
+    }
+    .clean-card h3{
+      margin:0 0 12px;
+      color:#071F42;
+      font-size:20px;
+    }
+    .sentence-card{
+      border-left:5px solid #0C92A1;
+      background:#F7FBFC;
+      border-radius:16px;
+      padding:14px;
+      color:#405169;
+      font-size:13px;
+      line-height:1.6;
+      font-weight:800;
+    }
+    .check-road{
+      display:grid;
+      gap:8px;
+      margin-top:12px;
+    }
+    .check-road div{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      padding:11px 12px;
+      border-radius:14px;
+      background:#F7FAFD;
+      border:1px solid #E1EAF2;
+      color:#43546B;
+      font-size:12px;
+      font-weight:850;
+    }
+    .check-road b{
+      color:#12834A;
+    }
+    .manager-command{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:12px;
+      margin-bottom:18px;
+    }
+    .command-tile{
+      background:#fff;
+      border:1px solid #DDE8F2;
+      border-radius:20px;
+      padding:17px;
+      box-shadow:0 10px 26px rgba(7,59,128,.05);
+    }
+    .command-tile b{
+      display:block;
+      color:#073B80;
+      font-size:26px;
+      margin-bottom:7px;
+    }
+    .command-tile span{
+      color:#526177;
+      font-size:12px;
+      line-height:1.45;
+      font-weight:850;
+    }
+    .manager-main-grid{
+      display:grid;
+      grid-template-columns:1.25fr .75fr;
+      gap:18px;
+      align-items:start;
+    }
+    .event-map{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    .event-visual{
+      min-height:260px;
+      border-radius:20px;
+      padding:18px;
+      color:#fff;
+      background:
+        linear-gradient(135deg,rgba(9,44,82,.94),rgba(12,109,130,.88)),
+        repeating-linear-gradient(45deg,rgba(255,255,255,.12) 0 8px,transparent 8px 16px);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .event-visual b{
+      font-size:19px;
+    }
+    .event-visual span{
+      align-self:flex-start;
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.16);
+      font-size:12px;
+      font-weight:900;
+      margin-right:6px;
+      margin-top:8px;
+      display:inline-flex;
+    }
+    .decision-list{
+      display:grid;
+      gap:10px;
+    }
+    .decision-list div{
+      padding:13px;
+      border-radius:16px;
+      border:1px solid #E1EAF2;
+      background:#F8FBFD;
+    }
+    .decision-list b{
+      display:block;
+      color:#071F42;
+      margin-bottom:5px;
+    }
+    .decision-list span{
+      color:#526177;
+      font-size:12px;
+      line-height:1.45;
+      font-weight:800;
+    }
+    @media (max-width:1200px){
+      .entry-layout,
+      .clean-role-grid,
+      .manager-main-grid{
+        grid-template-columns:1fr;
+      }
+      .role-choice-grid,
+      .entry-proof,
+      .entry-infographic,
+      .clean-process,
+      .manager-command,
+      .event-map{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+    @media (max-width:760px){
+      .entry-header,
+      .mode-intro-clean{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+      .role-choice-grid,
+      .entry-proof,
+      .entry-infographic,
+      .clean-process,
+      .mini-status-grid,
+      .manager-command,
+      .event-map{
+        grid-template-columns:1fr;
+      }
+      .entry-shell{
+        padding:24px 18px;
+      }
+      .role-choice-card{
+        min-height:auto;
+      }
+    }
+
     .section{display:none;}
     .section.active{display:block;}
 
@@ -1911,10 +2479,10 @@
   </style>
 </head>
 <body>
-  <div class="app">
+  <div class="app entry-mode">
     <aside>
       <div class="brand">
-        <div class="brand-logo">⚙️</div>
+        <div class="brand-logo">AX</div>
         <div>
           <h1>Retrofit Edge<br/>AX Copilot</h1>
           <small>Manufacturing Operations & Safety</small>
@@ -1956,227 +2524,192 @@
           <h2 id="pageTitle">역할 기반 시작 화면</h2>
         </div>
         <div class="top-actions">
-          <div class="search">🔎 설비, 라인, 이벤트, 보고서 검색</div>
+          <div class="search">설비, 라인, 이벤트, 보고서 검색</div>
           <div class="status-pill"><span class="dot"></span> Live Monitoring</div>
         </div>
       </div>
 
       <!-- Role Select -->
       <section id="roleSelect" class="section active">
-        <div class="section-head">
-          <h2>사용자 역할을 먼저 선택하세요</h2>
-          <p>첫 접속부터 현장 작업자와 관리자를 분리해, 각 사용자에게 필요한 판단과 행동만 먼저 보여줍니다.</p>
-        </div>
-
-        <div class="role-entry-grid">
-          <article class="role-entry-card worker">
-            <div>
-              <h3>현장 작업자 모드</h3>
-              <p>작업자는 복잡한 지표보다 즉시 경고, 조치 가이드, 점검 등록이 중요합니다. 단말·웨어러블 기준으로 위험 상황과 다음 행동을 빠르게 확인하도록 구성합니다.</p>
-              <div class="role-tag-row">
-                <span>작업 시작</span><span>실시간 경고</span><span>AI 조치 가이드</span><span>점검 등록</span>
-              </div>
-              <div class="role-task-list">
-                <div class="role-task"><b>1</b><div><strong>로그인 후 작업 시작</strong><span>작업자 단말 또는 웨어러블로 생산라인 작업을 시작합니다.</span></div></div>
-                <div class="role-task"><b>2</b><div><strong>위험 알림 확인</strong><span>CCTV·IoT·Vision AI가 감지한 PPE, 위험구역, 끼임 위험을 즉시 확인합니다.</span></div></div>
-                <div class="role-task"><b>3</b><div><strong>조치 후 결과 등록</strong><span>AI 코파일럿 가이드와 체크리스트에 따라 점검 결과를 남깁니다.</span></div></div>
+        <div class="entry-shell">
+          <header class="entry-header">
+            <div class="entry-brand">
+              <div class="entry-mark">AX</div>
+              <div>
+                <b>Retrofit Edge AX Copilot</b>
+                <span>Manufacturing Operations & Safety</span>
               </div>
             </div>
-            <div class="role-actions">
-              <button class="role-primary" data-jump-target="worker">작업자 화면 보기</button>
-              <button class="role-secondary" data-jump-target="scenario">전체 흐름 보기</button>
-            </div>
-          </article>
+            <div class="entry-badge">Role-based Operations</div>
+          </header>
 
-          <article class="role-entry-card manager">
-            <div>
-              <h3>관리자 모드</h3>
-              <p>관리자는 전체 현황을 보고 위험도를 판단해야 합니다. 설비 상태, 안전 이벤트, 품질 이상, CCTV 분석 결과를 하나의 관제 화면에서 연결해 의사결정을 지원합니다.</p>
-              <div class="role-tag-row">
-                <span>통합 관제</span><span>위험등급 판단</span><span>정비 지시</span><span>품질 개선</span>
-              </div>
-              <div class="role-task-list">
-                <div class="role-task"><b>1</b><div><strong>라인별 상태 모니터링</strong><span>설비, 안전, 품질 이벤트를 우선순위 기준으로 확인합니다.</span></div></div>
-                <div class="role-task"><b>2</b><div><strong>원인과 위험등급 판단</strong><span>CCTV, Vision AI 결과, IoT 센서, 정비 이력을 함께 조회합니다.</span></div></div>
-                <div class="role-task"><b>3</b><div><strong>출동·정지·정비 지시</strong><span>위험 수준에 따라 현장 출동, 설비 정지, 유지보수 오더를 발행합니다.</span></div></div>
+          <div class="entry-layout">
+            <div class="entry-copy">
+              <small>Smart Manufacturing Platform</small>
+              <h2>현장에서는 빠른 행동, 관제실에서는 정확한 판단</h2>
+              <p>처음 접속하면 사용자 역할을 먼저 선택합니다. 작업자는 경고와 조치에 집중하고, 관리자는 전체 상황과 의사결정 근거를 중심으로 봅니다.</p>
+              <div class="entry-proof">
+                <div><b>1분</b><span>위험 알림 확인 목표</span></div>
+                <div><b>15분</b><span>고위험 이벤트 대응 SLA</span></div>
+                <div><b>100%</b><span>조치 이력 자동 저장</span></div>
               </div>
             </div>
-            <div class="role-actions">
-              <button class="role-primary manager" data-jump-target="manager">관리자 화면 보기</button>
-              <button class="role-secondary" data-jump-target="overview">통합 현황 보기</button>
+
+            <div class="role-choice-grid">
+              <button class="role-choice-card worker" data-jump-target="worker">
+                <div>
+                  <div class="role-choice-top">
+                    <div>
+                      <h3>현장 작업자</h3>
+                      <p>작업 중 바로 확인해야 하는 위험 알림, AI 조치 가이드, 점검 등록만 전면에 배치합니다.</p>
+                    </div>
+                    <div class="role-code">W</div>
+                  </div>
+                  <div class="choice-flow">
+                    <div class="choice-step"><b>01</b><span>작업 시작 및 위치·PPE 상태 확인</span></div>
+                    <div class="choice-step"><b>02</b><span>위험구역 접근, 끼임 위험, 설비 이상 즉시 경고</span></div>
+                    <div class="choice-step"><b>03</b><span>AI 가이드 확인 후 점검완료 등록</span></div>
+                  </div>
+                </div>
+                <div class="choice-cta">현장 작업자 화면으로 진입</div>
+              </button>
+
+              <button class="role-choice-card manager" data-jump-target="manager">
+                <div>
+                  <div class="role-choice-top">
+                    <div>
+                      <h3>관리자</h3>
+                      <p>설비, 안전, 품질 이벤트를 한 화면에서 보고 출동·정지·정비 판단을 내립니다.</p>
+                    </div>
+                    <div class="role-code">M</div>
+                  </div>
+                  <div class="choice-flow">
+                    <div class="choice-step"><b>01</b><span>라인별 위험도와 이벤트 우선순위 확인</span></div>
+                    <div class="choice-step"><b>02</b><span>CCTV, Vision AI, IoT 센서, 정비 이력 통합 조회</span></div>
+                    <div class="choice-step"><b>03</b><span>현장 출동, 설비 정지, 정비 오더 지시</span></div>
+                  </div>
+                </div>
+                <div class="choice-cta">관리자 화면으로 진입</div>
+              </button>
             </div>
-          </article>
-        </div>
-
-        <div class="role-principle">
-          <div class="principle-box"><b>작업자 UX</b><span>알림과 조치 중심으로 단순화해 현장 대응 시간을 줄입니다.</span></div>
-          <div class="principle-box"><b>관리자 UX</b><span>라인별 위험도와 근거 데이터를 함께 보여 의사결정을 돕습니다.</span></div>
-          <div class="principle-box"><b>공통 이벤트</b><span>CCTV, IoT, Vision AI, 점검 이력을 하나의 이벤트로 연결합니다.</span></div>
-          <div class="principle-box"><b>추적 가능성</b><span>경고, 조치, 승인, 정비 오더가 모두 이력으로 남습니다.</span></div>
-        </div>
-
-        <div class="scenario-panel">
-          <div class="card-head">
-            <h3>역할별 화면 설계 원칙</h3>
-            <span class="badge">Role-Based IA</span>
           </div>
-          <table class="role-matrix">
-            <thead><tr><th>구분</th><th>현장 작업자</th><th>관리자</th></tr></thead>
-            <tbody>
-              <tr><td>핵심 목적</td><td>위험을 빠르게 인지하고 정해진 절차대로 조치</td><td>전체 위험도를 판단하고 출동·정비·품질 개선 지시</td></tr>
-              <tr><td>주요 화면</td><td>작업 시작, 경고 알림, AI 조치 가이드, 체크리스트</td><td>통합 대시보드, CCTV 분석, 설비 위험도, 품질 이상 현황</td></tr>
-              <tr><td>AI 코파일럿 역할</td><td>현장에서 바로 따라 할 수 있는 조치 절차 제시</td><td>원인 후보, 영향 범위, 우선순위, 보고서 초안 제공</td></tr>
-            </tbody>
-          </table>
-          <div class="role-flow-map">
-            <div class="role-flow-node"><b>01 작업 시작</b><span>작업자 로그인과 라인 상태 확인</span></div>
-            <div class="role-flow-node"><b>02 데이터 수집</b><span>CCTV·IoT·설비 상태 실시간 연결</span></div>
-            <div class="role-flow-node"><b>03 이상 감지</b><span>Vision AI와 센서 기반 위험 판단</span></div>
-            <div class="role-flow-node"><b>04 조치 판단</b><span>작업자는 가이드 수행, 관리자는 지시</span></div>
-            <div class="role-flow-node"><b>05 결과 기록</b><span>점검 완료, 승인, 정비 오더 이력화</span></div>
+
+          <div class="entry-infographic">
+            <div class="info-node"><b>01 감지</b><span>CCTV와 IoT 센서가 현장 상태를 수집합니다.</span></div>
+            <div class="info-node"><b>02 분석</b><span>Vision AI가 위험 행동과 품질 이상을 판별합니다.</span></div>
+            <div class="info-node"><b>03 알림</b><span>작업자 단말과 관리자 대시보드에 동시에 전달합니다.</span></div>
+            <div class="info-node"><b>04 판단</b><span>AI 코파일럿이 원인과 조치 후보를 요약합니다.</span></div>
+            <div class="info-node"><b>05 기록</b><span>점검 결과와 정비 오더를 이력으로 남깁니다.</span></div>
           </div>
         </div>
       </section>
+
 
       <!-- Worker Mode -->
       <section id="worker" class="section">
-        <div class="section-head">
-          <h2>현장 작업자 모드</h2>
-          <p>작업자가 현장에서 바로 써야 하는 화면입니다. 복잡한 분석보다 위험 알림, AI 조치 가이드, 점검완료 등록을 전면에 둡니다.</p>
+        <div class="mode-intro-clean">
+          <div>
+            <span class="mode-eyebrow">Worker Terminal</span>
+            <h2>현장 작업자 모드</h2>
+            <p>작업자 화면은 분석보다 행동이 먼저입니다. 경고를 보고, AI 가이드를 확인하고, 점검 결과를 남기는 3단계로 정리했습니다.</p>
+          </div>
+          <button class="mode-return" data-jump-target="roleSelect">역할 선택으로</button>
         </div>
 
-        <div class="mode-layout">
-          <div class="worker-device">
-            <div class="worker-device-head">
-              <b>작업자 단말 · 라인 A-03</b>
-              <span>Live Alert</span>
-            </div>
-            <div class="worker-alert-main">
-              이상감지: 안전모 미착용 가능성 및 설비 #M-07 끼임 위험 반경 접근
-            </div>
-            <div class="worker-quick-grid">
-              <div class="worker-quick"><b>작업자 위치</b><span>위험구역 1.2m 접근, 즉시 이탈 권고</span></div>
-              <div class="worker-quick"><b>PPE 상태</b><span>안전모 판별 신뢰도 62%, 재확인 필요</span></div>
-              <div class="worker-quick"><b>설비 상태</b><span>진동 82%, 온도 71℃, 기준치 초과</span></div>
-              <div class="worker-quick"><b>현장 알림</b><span>단말 알림과 경광등 동시 송출</span></div>
-            </div>
-            <div class="worker-check">
-              <div><span>안전거리 확보</span><b>필수</b></div>
-              <div><span>PPE 착용 재확인</span><b>필수</b></div>
-              <div><span>진동·온도 재측정</span><b>권장</b></div>
-              <div><span>점검 사진 등록</span><b>대기</b></div>
-              <div><span>점검완료 보고</span><b>미등록</b></div>
-            </div>
-          </div>
+        <div class="clean-process">
+          <div><b>01 작업 시작</b><span>작업자 단말 로그인 및 라인 상태 확인</span></div>
+          <div><b>02 이상감지</b><span>PPE, 위험구역, 끼임 위험, 설비 이상 감지</span></div>
+          <div><b>03 조치 가이드</b><span>AI 코파일럿이 우선 조치와 체크리스트 제공</span></div>
+          <div><b>04 점검완료</b><span>사진, 측정값, 결과를 관리자 화면으로 전달</span></div>
+        </div>
 
-          <div class="mode-stack">
-            <article class="mode-card">
-              <div class="card-head">
-                <h3>AI 코파일럿 조치 가이드</h3>
-                <span class="badge">Worker Copilot</span>
-              </div>
-              <div class="copilot-shell">
-                <div class="copilot-query">작업자: 지금 무엇부터 확인해야 하나요?</div>
-                <div class="copilot-query answer">1차로 위험구역에서 이탈하고, 안전모 착용 상태를 재확인합니다. 이후 설비 #M-07의 보호커버와 비상정지 버튼 접근 가능 여부를 확인한 뒤 진동·온도 값을 재측정합니다.</div>
-                <div class="copilot-query">작업자: 점검 결과는 어떻게 남기나요?</div>
-                <div class="copilot-query answer">체크리스트 5개 항목을 완료하고 사진 1장을 등록하면 점검완료 이벤트가 관리자 화면에 자동 전달됩니다.</div>
-              </div>
+        <div class="clean-role-grid">
+          <article class="focus-panel dark">
+            <h3>작업자 단말 화면</h3>
+            <div class="alert-hero">이상감지: 안전모 미착용 가능성 및 설비 #M-07 끼임 위험 반경 접근</div>
+            <div class="mini-status-grid">
+              <div class="mini-status"><b>위치</b><span>위험구역 1.2m 접근, 즉시 이탈 권고</span></div>
+              <div class="mini-status"><b>PPE</b><span>안전모 판별 신뢰도 62%, 재확인 필요</span></div>
+              <div class="mini-status"><b>설비</b><span>진동 82%, 온도 71℃, 기준치 초과</span></div>
+              <div class="mini-status"><b>알림</b><span>단말 알림과 현장 경광등 동시 송출</span></div>
+            </div>
+            <div class="action-strip">
+              <span>AI 조치 가이드</span>
+              <span>점검완료 등록</span>
+            </div>
+          </article>
+
+          <div class="clean-card-stack">
+            <article class="clean-card">
+              <h3>AI 조치 가이드</h3>
+              <div class="sentence-card">위험구역에서 이탈한 뒤 안전모 착용 상태를 재확인합니다. 이후 설비 보호커버와 비상정지 버튼 접근 가능 여부를 확인하고, 진동·온도 값을 재측정합니다.</div>
             </article>
-
-            <article class="mode-card">
-              <div class="card-head">
-                <h3>점검완료 등록 화면</h3>
-                <span class="badge">Checklist</span>
-              </div>
-              <div class="alert-stack">
-                <div class="alert-tile done"><b>안전거리 확보</b><span>위험 반경 밖으로 작업자 이동 확인</span><em>완료</em></div>
-                <div class="alert-tile done"><b>PPE 재확인</b><span>안전모 착용 사진과 판별 결과 등록</span><em>완료</em></div>
-                <div class="alert-tile"><b>관리자 승인 요청</b><span>진동 수치가 기준 대비 높아 정비 판단 필요</span><em>대기</em></div>
+            <article class="clean-card">
+              <h3>점검완료 체크리스트</h3>
+              <div class="check-road">
+                <div><span>안전거리 확보</span><b>완료</b></div>
+                <div><span>PPE 착용 사진 등록</span><b>완료</b></div>
+                <div><span>진동·온도 재측정</span><b>진행</b></div>
+                <div><span>관리자 승인 요청</span><b>대기</b></div>
               </div>
             </article>
           </div>
         </div>
       </section>
 
+
       <!-- Manager Mode -->
       <section id="manager" class="section">
-        <div class="section-head">
-          <h2>관리자 모드</h2>
-          <p>관리자는 설비·안전·품질 이벤트를 하나의 관제 화면에서 보고, 위험등급과 근거를 확인한 뒤 조치 지시를 내립니다.</p>
-        </div>
-
-        <div class="manager-dashboard">
-          <div class="manager-kpi"><b>3건</b><span>고위험 설비 이벤트<br/>정비 우선 검토 대상</span></div>
-          <div class="manager-kpi"><b>5건</b><span>작업자 안전 이벤트<br/>PPE·위험구역 포함</span></div>
-          <div class="manager-kpi"><b>12건</b><span>품질 이상 후보<br/>비전검사 재확인 필요</span></div>
-          <div class="manager-kpi"><b>12분</b><span>평균 대응 시간<br/>목표 15분 이내</span></div>
-        </div>
-
-        <div class="mode-layout">
-          <div class="mode-stack">
-            <article class="mode-card">
-              <div class="card-head">
-                <h3>통합 이벤트 관제</h3>
-                <span class="badge">Control Room</span>
-              </div>
-              <div class="camera-panel">
-                <div class="camera-view">
-                  <div>
-                    <b>CCTV A-03 · Vision AI 분석</b>
-                    <p style="margin:8px 0 0;color:rgba(255,255,255,.82);font-size:13px;font-weight:750;line-height:1.5;">작업자 접근, PPE 착용, 설비 가동 상태를 동일 이벤트 타임라인으로 조회합니다.</p>
-                  </div>
-                  <div class="ai-tags">
-                    <span>PPE 신뢰도 62%</span>
-                    <span>끼임 위험 반경</span>
-                    <span>진동 임계치 초과</span>
-                    <span>정비 이력 연계</span>
-                  </div>
-                </div>
-                <div class="event-detail">
-                  <div class="detail-row"><span>위험 등급</span><b>High</b></div>
-                  <div class="detail-row"><span>권장 조치</span><b>현장 출동</b></div>
-                  <div class="detail-row"><span>설비 제어</span><b>부분 정지 검토</b></div>
-                  <div class="detail-row"><span>조치 SLA</span><b>15분 이내</b></div>
-                </div>
-              </div>
-            </article>
-
-            <article class="mode-card">
-              <div class="card-head">
-                <h3>관리자 의사결정 버튼</h3>
-                <span class="badge">Action</span>
-              </div>
-              <div class="decision-grid">
-                <div class="decision-box"><b>설비 부분 정지</b><span>위험 반경 접근과 설비 이상이 동시에 발생하면 부분 정지를 검토합니다.</span></div>
-                <div class="decision-box"><b>현장 출동 요청</b><span>작업자 점검 결과가 미흡하거나 위험등급 High면 담당자 출동을 지시합니다.</span></div>
-                <div class="decision-box"><b>정비 오더 생성</b><span>정비 이력과 센서 추이를 근거로 유지보수 작업을 등록합니다.</span></div>
-              </div>
-            </article>
+        <div class="mode-intro-clean">
+          <div>
+            <span class="mode-eyebrow">Control Room</span>
+            <h2>관리자 모드</h2>
+            <p>관리자 화면은 전체 현황과 판단 근거가 먼저입니다. 설비·안전·품질 이벤트를 연결해 위험등급과 조치 우선순위를 보여줍니다.</p>
           </div>
+          <button class="mode-return" data-jump-target="roleSelect">역할 선택으로</button>
+        </div>
 
-          <div class="mode-stack">
-            <article class="mode-card">
-              <div class="card-head">
-                <h3>설비 모니터링 및 정비 우선순위</h3>
-                <span class="badge">Maintenance</span>
+        <div class="manager-command">
+          <div class="command-tile"><b>3건</b><span>고위험 설비 이벤트</span></div>
+          <div class="command-tile"><b>5건</b><span>작업자 안전 이벤트</span></div>
+          <div class="command-tile"><b>12건</b><span>품질 이상 후보</span></div>
+          <div class="command-tile"><b>12분</b><span>평균 대응 시간</span></div>
+        </div>
+
+        <div class="manager-main-grid">
+          <article class="focus-panel">
+            <h3>통합 이벤트 관제</h3>
+            <div class="event-map">
+              <div class="event-visual">
+                <div>
+                  <b>CCTV A-03 · Vision AI 분석</b>
+                  <p style="margin:10px 0 0;color:rgba(255,255,255,.84);font-size:13px;line-height:1.55;font-weight:750;">작업자 접근, PPE 착용, 설비 가동 상태를 동일 이벤트 타임라인으로 조회합니다.</p>
+                </div>
+                <div>
+                  <span>PPE 62%</span><span>끼임 위험</span><span>진동 초과</span>
+                </div>
               </div>
-              <div class="equipment-board">
-                <div class="asset-row"><b>M-07 프레스</b><div class="risk-bar"><i style="width:86%"></i></div><span class="state critical">위험</span></div>
-                <div class="asset-row"><b>C-12 컨베이어</b><div class="risk-bar"><i style="width:64%"></i></div><span class="state warning">주의</span></div>
-                <div class="asset-row"><b>V-04 비전검사</b><div class="risk-bar"><i style="width:48%"></i></div><span class="state normal">정상</span></div>
+              <div class="decision-list">
+                <div><b>위험 등급</b><span>High, 현장 출동 및 부분 정지 검토</span></div>
+                <div><b>근거 데이터</b><span>CCTV 이벤트, 진동 82%, 최근 정비 이력 90일 경과</span></div>
+                <div><b>권장 조치</b><span>작업자 이탈 확인 후 정비 오더 생성</span></div>
+                <div><b>기록 상태</b><span>이벤트와 점검 결과 자동 이력화</span></div>
+              </div>
+            </div>
+          </article>
+
+          <div class="clean-card-stack">
+            <article class="clean-card">
+              <h3>관리자 판단 버튼</h3>
+              <div class="check-road">
+                <div><span>현장 출동 요청</span><b>권장</b></div>
+                <div><span>설비 부분 정지</span><b>검토</b></div>
+                <div><span>정비 오더 생성</span><b>대기</b></div>
               </div>
             </article>
-
-            <article class="mode-card">
-              <div class="card-head">
-                <h3>품질 이상 및 공정 개선</h3>
-                <span class="badge">Quality</span>
-              </div>
-              <div class="alert-stack">
-                <div class="alert-tile"><b>표면 스크래치</b><span>비전검사 공정에서 동일 유형 후보 7건 발생</span><em>검토</em></div>
-                <div class="alert-tile"><b>치수 편차</b><span>라인 B-02 검사 기준 임계치 근접</span><em>주의</em></div>
-                <div class="alert-tile done"><b>개선 이력</b><span>조치 완료 후 품질 이벤트와 공정 조건을 함께 저장</span><em>저장</em></div>
-              </div>
+            <article class="clean-card">
+              <h3>품질 이상 연결</h3>
+              <div class="sentence-card">같은 라인의 품질 이상 후보 7건을 함께 표시해, 설비 이상이 품질 문제로 이어지는지 관리자 화면에서 바로 확인합니다.</div>
             </article>
           </div>
         </div>
@@ -3310,6 +3843,7 @@
     function activateSection(target){
       const section = document.getElementById(target);
       if(!section) return;
+      document.querySelector('.app')?.classList.toggle('entry-mode', target === 'roleSelect');
       document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
       document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
       const nav = document.querySelector('.nav-btn[data-target="' + target + '"]');
